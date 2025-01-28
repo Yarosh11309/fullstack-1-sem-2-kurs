@@ -1,0 +1,241 @@
+/* Общий стиль страницы */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eaeaea;
+}
+
+/* Калькулятор */
+.calculator {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка включения/выключения */
+#powerToggle {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+#powerToggle:hover {
+    background-color: #0056b3;
+}
+
+/* Дисплей */
+#display {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    color: #0f0;
+    text-align: right;
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Кнопки */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background-color: #444;
+}
+
+/* Все кнопки */
+button {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Числовые кнопки */
+button.num {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+button.num:hover {
+    background-color: #e6e6e6;
+}
+
+/* Кнопки операций */
+button.operation {
+    background-color: #ffa500;
+    color: white;
+}
+
+button.operation:hover {
+    background-color: #cc8400;
+}
+
+/* Кнопка очистки */
+#clear {
+    background-color: #dc3545;
+    color: white;
+    grid-column: span 2;
+}
+
+#clear:hover {
+    background-color: #b02a37;
+}
+
+/* Кнопка "равно" */
+#equal {
+    background-color: #28a745;
+    color: white;
+    grid-column: span 2;
+}
+
+#equal:hover {
+    background-color: #218838;
+}
+
+/* История вычислений */
+h3 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    color: white;
+    font-size: 14px;
+    background-color: #555;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#history li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #666;
+    border-radius: 4px;
+}
+
+#clearHistory {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6c757d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearHistory:hover {
+    background-color: #5a6268;
+}
+
+/* Скрытые элементы */
+.hidden {
+    display: none;
+}
+
+/* Фото */
+#photo {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Остальное остаётся без изменений */
+
+/* Скрыто по умолчанию */
+#ratingMenu {
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#ratingSlider {
+    width: 250px;
+    margin-top: 10px;
+    /* Градиент для ползунка */
+    background: linear-gradient(to right, #ddd 20%, #04a 20%);
+}
+
+#photo {
+    cursor: pointer;
+    border-radius: 8px;
+    max-width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+#rateButton {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #04a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rateButton:hover {
+    background-color: #005f77;
+}
+
+/* Модальное окно */
+#fullScreenPhoto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+#fullscreenImage {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Класс для скрытия */
+.hidden {
+    display: none;
+}
